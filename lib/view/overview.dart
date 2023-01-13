@@ -50,12 +50,8 @@ class _OverviewPageState extends State<OverviewPage> {
           Expanded(
               child: ListView(
             children: [
-              if (ResponsiveWidget.isLargeScreen(context) ||
-                  ResponsiveWidget.isMediumScreen(context))
-                if (ResponsiveWidget.isCustomSize(context))
-                  buildOverviewCardsMediumScreen(context)
-                else
-                  buildOverviewCardsLargeScreen(context)
+              if (ResponsiveWidget.isLargeScreen(context))
+                buildOverviewCardsLargeScreen(context)
               else
                 buildOverviewCardsSmallScreen(context),
               if (!ResponsiveWidget.isSmallScreen(context))
